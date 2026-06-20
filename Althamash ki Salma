@@ -1,0 +1,108 @@
+index.html
+style.css
+script.js
+photo1.jpg
+photo2.jpg
+<!DOCTYPE html>
+<html>
+<head>
+<title>Althamash Ki Salma ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>❤️ Althamash Ki Salma ❤️</h1>
+
+<img src="photo1.jpg" class="pic">
+<img src="photo2.jpg" class="pic">
+
+<p>
+Har date calendar mein nahi likhi jaati,
+kuch dates dil pe likh jaati hain. 🌹
+</p>
+
+<label>Select Date</label>
+<input type="date" id="date">
+
+<label>Choose Time</label>
+<select id="time">
+<option>Morning ☀️</option>
+<option>Afternoon 🌤️</option>
+<option>Evening 🌆</option>
+<option>Night 🌙</option>
+</select>
+
+<label>Choose Date Type</label>
+<select id="type">
+<option>Coffee Date ☕</option>
+<option>Long Walk 🚶</option>
+<option>Dinner Date 🍽️</option>
+<option>Movie Date 🎬</option>
+<option>Romantic Date 🌹</option>
+<option>Long Drive Date 🚗</option>
+<option>Room Date 🏨</option>
+</select>
+
+<button onclick="showMessage()">
+Choose My Date ❤️
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+body{
+font-family:Arial;
+background:#ffe6ee;
+text-align:center;
+padding:20px;
+}
+
+.pic{
+width:180px;
+border-radius:20px;
+margin:10px;
+}
+
+.container{
+background:white;
+padding:20px;
+border-radius:20px;
+max-width:600px;
+margin:auto;
+}
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+function showMessage(){
+
+let date=document.getElementById("date").value;
+let time=document.getElementById("time").value;
+let type=document.getElementById("type").value;
+
+let msg=
+`❤️ Salma ❤️
+
+Tumne ${date}
+ko ${time}
+mein ${type}
+choose ki hai.
+
+Ab mujhe bas uss din ka intezar rahega,
+jab ye date ek khoobsurat yaad ban jayegi.
+
+🌹 Tumhari muskurahat hi meri favourite destination hai. 🌹`;
+
+document.getElementById("result").innerHTML=msg;
+
+}
